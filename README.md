@@ -15,6 +15,19 @@ Players care for a single pet by feeding, cleaning, playing, and keeping it happ
 
 ---
 
+## 📂 Project Structure
+- /Art
+- /Temp → Placeholder sprites
+- /Final → Final game assets
+- /Audio
+- /Temp → Placeholder sounds/music/Final → Final audio/Scenes → Unity/Godot scenes/Scripts → Game logic scripts/UI → UI layouts, prefabs, and styles
+- /Final → Final audio
+- /Scenes → Unity/Godot scenes
+- /Scripts → Game logic scripts
+- /UI → UI layouts, prefabs, and styles
+
+---
+
 ## 🎯 Features (v1.0)
 - Needs system with decay over time
 - Actions: Feed, Clean, Play, Sleep
@@ -22,9 +35,7 @@ Players care for a single pet by feeding, cleaning, playing, and keeping it happ
 - Basic UI with stats bars and menus
 - Simple animations and sound effects
 - No multiplayer or online features
-
 ---
-
 ## 🗓 Development Schedule
 
 ### **Week 1 – Planning & Core Setup**
@@ -56,16 +67,3 @@ Players care for a single pet by feeding, cleaning, playing, and keeping it happ
 - Adjust difficulty/timer balance
 - Clean menus and transitions
 - Export final build & test on platform
-
----
-
-## 📂 Project Structure
-- /Art
-- /Temp → Placeholder sprites
-- /Final → Final game assets
-- /Audio
-- /Temp → Placeholder sounds/music/Final → Final audio/Scenes → Unity/Godot scenes/Scripts → Game logic scripts/UI → UI layouts, prefabs, and styles
-- /Final → Final audio
-- /Scenes → Unity/Godot scenes
-- /Scripts → Game logic scripts
-- /UI → UI layouts, prefabs, and styles
