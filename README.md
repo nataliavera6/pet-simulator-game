@@ -60,3 +60,12 @@ Players care for a single pet by feeding, cleaning, playing, and keeping it happ
 ---
 
 ## 📂 Project Structure
+/Art
+/Temp → Placeholder sprites
+/Final → Final game assets
+/Audio
+/Temp → Placeholder sounds/music
+/Final → Final audio
+/Scenes → Unity/Godot scenes
+/Scripts → Game logic scripts
+/UI → UI layouts, prefabs, and styles
