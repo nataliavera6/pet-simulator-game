@@ -1,6 +1,6 @@
-extends Node
-@onready var menu_window = $"menu"
+extends Button
 
+@onready var menu_window = $"menu"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -10,7 +10,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-#button to go back to main
-func _on_return_placeholder_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main.tscn" )
-	
+
+func _on_pressed() -> void:
+	menu_window.visible = !menu_window.visible
+
+
+func _on_menu_close_requested() -> void:
+	menu_window.visible = false

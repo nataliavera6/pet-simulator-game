@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpgd60gfa8w8j"]
+[gd_scene load_steps=3 format=3 uid="uid://dpgd60gfa8w8j"]
 
 [ext_resource type="Script" uid="uid://ctmhbcya8kf4a" path="res://Scenes/main.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://kav7sixbficr" path="res://Scenes/menu.gd" id="2_bo1nx"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_jjgbg")
@@ -44,20 +45,6 @@ offset_right = 84.0
 offset_bottom = 537.0
 text = "play"
 
-[node name="menu placeholder4" type="Button" parent="."]
-offset_left = 1072.0
-offset_top = 10.0
-offset_right = 1125.0
-offset_bottom = 56.0
-text = "menu"
-
-[node name="return placeholder3" type="Button" parent="."]
-offset_left = 36.0
-offset_top = 10.0
-offset_right = 81.0
-offset_bottom = 56.0
-text = "<---"
-
 [node name="bath placeholder2" type="Button" parent="."]
 offset_left = 37.0
 offset_top = 232.0
@@ -65,7 +52,16 @@ offset_right = 82.0
 offset_bottom = 278.0
 text = "bath"
 
-[node name="menu" type="Window" parent="."]
+[node name="menu placeholder4" type="Button" parent="."]
+offset_left = 1072.0
+offset_top = 10.0
+offset_right = 1125.0
+offset_bottom = 56.0
+text = "menu"
+script = ExtResource("2_bo1nx")
+
+[node name="menu" type="Window" parent="menu placeholder4"]
+auto_translate_mode = 1
 initial_position = 1
 size = Vector2i(400, 300)
 visible = false
@@ -75,7 +71,7 @@ theme_override_colors/title_outline_modulate = Color(0.833273, 0.800069, 1.54018
 [connection signal="pressed" from="Feed placeholder" to="." method="_on_feed_placeholder_pressed"]
 [connection signal="pressed" from="rest placeholder3" to="." method="_on_rest_placeholder_3_pressed"]
 [connection signal="pressed" from="play placeholder4" to="." method="_on_play_placeholder_4_pressed"]
-[connection signal="pressed" from="menu placeholder4" to="." method="_on_menu_placeholder_4_pressed"]
-[connection signal="pressed" from="return placeholder3" to="." method="_on_return_placeholder_3_pressed"]
 [connection signal="pressed" from="bath placeholder2" to="." method="_on_bath_placeholder_2_pressed"]
-[connection signal="close_requested" from="menu" to="." method="_on_menu_close_requested"]
+[connection signal="pressed" from="menu placeholder4" to="." method="_on_menu_placeholder_4_pressed"]
+[connection signal="pressed" from="menu placeholder4" to="menu placeholder4" method="_on_pressed"]
+[connection signal="close_requested" from="menu placeholder4/menu" to="menu placeholder4" method="_on_menu_close_requested"]

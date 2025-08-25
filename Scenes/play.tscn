@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://di5k2hf0ufatb"]
+[gd_scene load_steps=3 format=3 uid="uid://di5k2hf0ufatb"]
 
 [ext_resource type="Script" uid="uid://8rn03g1cmt0q" path="res://Scenes/play.gd" id="1_7kc6r"]
+[ext_resource type="Script" uid="uid://kav7sixbficr" path="res://Scenes/menu.gd" id="2_dm5w0"]
 
 [node name="Play" type="Node"]
 script = ExtResource("1_7kc6r")
@@ -30,7 +31,15 @@ offset_right = 81.0
 offset_bottom = 56.0
 text = "<---"
 
-[node name="menu" type="Window" parent="."]
+[node name="menu placeholder4" type="Button" parent="."]
+offset_left = 1072.0
+offset_top = 10.0
+offset_right = 1125.0
+offset_bottom = 56.0
+text = "menu"
+script = ExtResource("2_dm5w0")
+
+[node name="menu" type="Window" parent="menu placeholder4"]
 auto_translate_mode = 1
 initial_position = 1
 size = Vector2i(400, 300)
@@ -38,11 +47,7 @@ visible = false
 theme_override_colors/title_color = Color(0.702884, 0.637606, 0.300267, 1)
 theme_override_colors/title_outline_modulate = Color(0.833273, 0.800069, 1.54018e-06, 1)
 
-[node name="menu placeholder4" type="Button" parent="."]
-offset_left = 1072.0
-offset_top = 10.0
-offset_right = 1125.0
-offset_bottom = 56.0
-text = "menu"
-
 [connection signal="pressed" from="return placeholder3" to="." method="_on_return_placeholder_3_pressed"]
+[connection signal="pressed" from="menu placeholder4" to="." method="_on_menu_placeholder_4_pressed"]
+[connection signal="pressed" from="menu placeholder4" to="menu placeholder4" method="_on_pressed"]
+[connection signal="close_requested" from="menu placeholder4/menu" to="menu placeholder4" method="_on_menu_close_requested"]

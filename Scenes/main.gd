@@ -11,17 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-#button to go back (temp, not sure if necessary on main screen)
-func _on_return_placeholder_3_pressed() -> void:
-	pass # Replace with function body.
 
-#button to open Menu
-func _on_menu_placeholder_4_pressed() -> void:
-	menu_window.visible = !menu_window.visible
-	
-#close menu popu by pressing x
-func _on_menu_close_requested() -> void:
-	menu_window.visible = false
 	
 	
 #button to give bath
