@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dpgd60gfa8w8j"]
+
+[node name="Main" type="Node"]
+
+[node name="backround" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 650.0
+color = Color(1, 1, 0.756863, 1)
+
+[node name="Footer" type="ColorRect" parent="."]
+offset_top = 579.0
+offset_right = 1156.0
+offset_bottom = 650.0
+color = Color(1, 0.776471, 0.741176, 1)
+
+[node name="Header" type="ColorRect" parent="."]
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 1160.0
+offset_bottom = 73.0
+color = Color(1, 0.776471, 0.741176, 1)
