@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpgd60gfa8w8j"]
+[gd_scene load_steps=15 format=3 uid="uid://dpgd60gfa8w8j"]
 
 [ext_resource type="Script" uid="uid://ctmhbcya8kf4a" path="res://Scenes/main.gd" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://f52377amyh7i" path="res://Art/Sleep.png" id="2_8gbba"]
@@ -7,8 +7,34 @@
 [ext_resource type="Texture2D" uid="uid://ptly3tist1v5" path="res://Art/Minigame.png" id="4_6bp64"]
 [ext_resource type="Texture2D" uid="uid://co6h2lrtqt7cs" path="res://Art/Soap.png" id="5_344ge"]
 [ext_resource type="Texture2D" uid="uid://bfhlmurh45scb" path="res://Art/menu.png" id="7_6bp64"]
+[ext_resource type="Texture2D" uid="uid://enh8ef3lk3yc" path="res://Art/pet_blinking.png" id="8_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://tokw2r06akmw" path="res://Art/pet_standby.png" id="9_hptm8"]
+[ext_resource type="Texture2D" uid="uid://c4miees35xwke" path="res://Art/Bar_top_layer.png" id="10_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://1yohooi6oy5n" path="res://Art/Bars.png" id="11_6iyac"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_21xkr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d1ilt"]
+radius = 162.373
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6iyac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ynf5e")
+}],
+"loop": true,
+"name": &"blinking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hptm8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_jjgbg")
@@ -35,9 +61,9 @@ color = Color(1, 0.776471, 0.741176, 1)
 
 [node name="rest placeholder3" type="Button" parent="."]
 offset_left = 10.0
-offset_top = 349.0
+offset_top = 314.0
 offset_right = 111.0
-offset_bottom = 431.0
+offset_bottom = 396.0
 pivot_offset = Vector2(1730, 1973)
 flat = true
 
@@ -73,9 +99,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Feed placeholder" type="Button" parent="."]
 offset_left = 16.0
-offset_top = 48.0
+offset_top = 22.0
 offset_right = 121.0
-offset_bottom = 124.0
+offset_bottom = 98.0
 flat = true
 
 [node name="TextureRect2" type="TextureRect" parent="Feed placeholder"]
@@ -97,10 +123,10 @@ texture = ExtResource("3_21xkr")
 expand_mode = 1
 
 [node name="play placeholder4" type="Button" parent="."]
-offset_left = 14.0
-offset_top = 504.0
-offset_right = 116.0
-offset_bottom = 583.0
+offset_left = 16.0
+offset_top = 466.0
+offset_right = 118.0
+offset_bottom = 545.0
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="play placeholder4"]
@@ -125,9 +151,9 @@ expand_mode = 1
 
 [node name="bath placeholder2" type="Button" parent="."]
 offset_left = 12.0
-offset_top = 188.0
+offset_top = 166.0
 offset_right = 134.0
-offset_bottom = 268.0
+offset_bottom = 246.0
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="bath placeholder2"]
@@ -176,14 +202,47 @@ texture = ExtResource("7_6bp64")
 expand_mode = 1
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(553, 333)
+shape = SubResource("CircleShape2D_d1ilt")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
-position = Vector2(88.0001, 373)
-scale = Vector2(0.07875, 0.066875)
-texture = ExtResource("2_8gbba")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/CollisionShape2D"]
+position = Vector2(3, -5)
+scale = Vector2(0.118163, 0.105605)
+sprite_frames = SubResource("SpriteFrames_6iyac")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 858.0
+offset_top = 555.0
+offset_right = 1158.0
+offset_bottom = 648.0
+texture = ExtResource("10_d1ilt")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_left = 572.0
+offset_top = 555.0
+offset_right = 859.0
+offset_bottom = 648.0
+texture = ExtResource("11_6iyac")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -12.0
+offset_top = 559.0
+offset_right = 285.0
+offset_bottom = 652.0
+texture = ExtResource("11_6iyac")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 285.0
+offset_top = 555.0
+offset_right = 572.0
+offset_bottom = 648.0
+texture = ExtResource("10_d1ilt")
+expand_mode = 1
 
 [connection signal="pressed" from="rest placeholder3" to="." method="_on_rest_placeholder_3_pressed"]
 [connection signal="pressed" from="Feed placeholder" to="." method="_on_feed_placeholder_pressed"]
