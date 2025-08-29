@@ -1,0 +1,194 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpgd60gfa8w8j"]
+
+[ext_resource type="Script" uid="uid://ctmhbcya8kf4a" path="res://Scenes/main.gd" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://f52377amyh7i" path="res://Art/Sleep.png" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://kav7sixbficr" path="res://Scenes/menu.gd" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://fe2i5pels0xx" path="res://Art/Food.png" id="3_21xkr"]
+[ext_resource type="Texture2D" uid="uid://ptly3tist1v5" path="res://Art/Minigame.png" id="4_6bp64"]
+[ext_resource type="Texture2D" uid="uid://co6h2lrtqt7cs" path="res://Art/Soap.png" id="5_344ge"]
+[ext_resource type="Texture2D" uid="uid://bfhlmurh45scb" path="res://Art/menu.png" id="7_6bp64"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_21xkr"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_jjgbg")
+
+[node name="backround" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = -5.0
+offset_right = 1150.0
+offset_bottom = 648.0
+color = Color(0.99009, 1, 0.787531, 1)
+
+[node name="Footer" type="ColorRect" parent="backround"]
+offset_left = 1052.0
+offset_top = -1.0
+offset_right = 1155.0
+offset_bottom = 653.0
+color = Color(1, 0.776471, 0.741176, 1)
+
+[node name="Header" type="ColorRect" parent="backround"]
+offset_left = -6.0
+offset_right = 116.0
+offset_bottom = 653.0
+color = Color(1, 0.776471, 0.741176, 1)
+
+[node name="rest placeholder3" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 349.0
+offset_right = 111.0
+offset_bottom = 431.0
+pivot_offset = Vector2(1730, 1973)
+flat = true
+
+[node name="TextureRect2" type="TextureRect" parent="rest placeholder3"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.029703
+anchor_top = -0.0243904
+anchor_right = 0.10363
+anchor_bottom = 0.0441027
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 70.0
+texture = ExtResource("2_8gbba")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="rest placeholder3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0133333
+anchor_right = 0.0133333
+anchor_bottom = 0.0136986
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 70.0
+texture = ExtResource("2_8gbba")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Feed placeholder" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 121.0
+offset_bottom = 124.0
+flat = true
+
+[node name="TextureRect2" type="TextureRect" parent="Feed placeholder"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 74.0
+offset_bottom = 69.0
+texture = ExtResource("3_21xkr")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Feed placeholder"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 70.0
+offset_bottom = 70.0
+texture = ExtResource("3_21xkr")
+expand_mode = 1
+
+[node name="play placeholder4" type="Button" parent="."]
+offset_left = 14.0
+offset_top = 504.0
+offset_right = 116.0
+offset_bottom = 583.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="play placeholder4"]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_21xkr")
+layout_mode = 0
+offset_left = 2.0
+offset_top = -4.0
+offset_right = 84.0
+offset_bottom = 79.0
+texture = ExtResource("4_6bp64")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="play placeholder4"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -4.0
+offset_right = 76.0
+offset_bottom = 69.0
+texture = ExtResource("4_6bp64")
+expand_mode = 1
+
+[node name="bath placeholder2" type="Button" parent="."]
+offset_left = 12.0
+offset_top = 188.0
+offset_right = 134.0
+offset_bottom = 268.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="bath placeholder2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 77.0
+offset_bottom = 73.0
+texture = ExtResource("5_344ge")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="bath placeholder2"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 70.0
+offset_bottom = 65.0
+texture = ExtResource("5_344ge")
+expand_mode = 1
+
+[node name="menu placeholder4" type="Button" parent="."]
+offset_left = 1077.0
+offset_top = 15.0
+offset_right = 1130.0
+offset_bottom = 61.0
+flat = true
+script = ExtResource("2_bo1nx")
+
+[node name="menu" type="Window" parent="menu placeholder4"]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(400, 300)
+visible = false
+theme_override_colors/title_color = Color(0.702884, 0.637606, 0.300267, 1)
+theme_override_colors/title_outline_modulate = Color(0.833273, 0.800069, 1.54018e-06, 1)
+
+[node name="TextureRect" type="TextureRect" parent="menu placeholder4"]
+process_mode = 3
+clip_children = 2
+use_parent_material = true
+layout_mode = 0
+offset_right = 53.0
+offset_bottom = 49.0
+texture = ExtResource("7_6bp64")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+position = Vector2(88.0001, 373)
+scale = Vector2(0.07875, 0.066875)
+texture = ExtResource("2_8gbba")
+
+[connection signal="pressed" from="rest placeholder3" to="." method="_on_rest_placeholder_3_pressed"]
+[connection signal="pressed" from="Feed placeholder" to="." method="_on_feed_placeholder_pressed"]
+[connection signal="pressed" from="play placeholder4" to="." method="_on_play_placeholder_4_pressed"]
+[connection signal="pressed" from="bath placeholder2" to="." method="_on_bath_placeholder_2_pressed"]
+[connection signal="pressed" from="menu placeholder4" to="." method="_on_menu_placeholder_4_pressed"]
+[connection signal="pressed" from="menu placeholder4" to="menu placeholder4" method="_on_pressed"]
+[connection signal="close_requested" from="menu placeholder4/menu" to="menu placeholder4" method="_on_menu_close_requested"]
