@@ -67,3 +67,6 @@ Players care for a single pet by feeding, cleaning, playing, and keeping it happ
 - Adjust difficulty/timer balance
 - Clean menus and transitions
 - Export final build & test on platform
+
+## 📂 Project Resources and Assets
+https://drive.google.com/drive/folders/1acmLFIz8ZBgQKLBwmutxTG_2BZtoP48j?usp=drive_link
